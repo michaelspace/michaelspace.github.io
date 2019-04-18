@@ -5,9 +5,3 @@ $(function() {
 	$('.cumf_bt_form_wrapper').remove();
 	$('div:contains("pakiet na PRO lub VIP w panelu naszego")').remove();
 });
-
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
