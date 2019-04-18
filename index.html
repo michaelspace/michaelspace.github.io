@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Moja strona" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&amp;subset=latin-ext" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Start</title>
+</head>
+
+<body>
+    
+    <script>
+        window.fbAsyncInit = function() {
+                  FB.init({
+                    appId      : '462362317848497',
+                    cookie     : true,
+                    xfbml      : true,
+                    version    : 'v3.2'
+                  });
+                    
+                  FB.AppEvents.logPageView();   
+                    
+                };
+              
+                (function(d, s, id){
+                   var js, fjs = d.getElementsByTagName(s)[0];
+                   if (d.getElementById(id)) {return;}
+                   js = d.createElement(s); js.id = id;
+                   js.src = "https://connect.facebook.net/en_US/sdk.js";
+                   fjs.parentNode.insertBefore(js, fjs);
+                 }(document, 'script', 'facebook-jssdk'));
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    </script>
+    <div id="fb-root"></div>
+    <div class="container">
+        <div class="title">
+            <h1>Kurs HMTL5 CSS3</h1>
+        </div>
+        <div id="links">
+            <a href="#" class="link" data-page="home">
+                <div class="navi">Start</div>
+            </a>
+            <a href="#" class="link" data-page="game">
+                <div class="navi">Kółko i Krzyżyk</div>
+            </a>
+            <a href="#" class="link" data-page="forms">
+                <div class="navi">Formularz</div>
+            </a>
+        </div>
+        <div class="content">
+            <div class="fb-login-button" data-size="medium" data-button-type="login_with" data-auto-logout-link="false"
+                data-use-continue-as="false">
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                </fb:login-button>
+            </div>
+            <div class="screen home">
+                <div class="main-content">
+                    <div class="article">
+                        <h2>Artykuł o HTML5</h2>
+
+                        <p class="article-text">
+                            HTML5 – język wykorzystywany do tworzenia i prezentowania stron internetowych www. Jest
+                            rozwinięciem języka HTML 4 i jego XML-owej odmiany (XHTML 1), opracowywane w ramach
+                            prac grupy roboczej WHATWG (Web Hypertext Application Technology Working Group) i W3C.
+                            Grupa robocza WHATWG rozpoczęła pracę nad nowym standardem w 2004 roku, jednocześnie
+                            HTML 4.01 nie było aktualizowane od 2000 roku. World Wide Web Consortium (W3C)
+                            koncentrowało się na przyszłych zmianach w XHTML 2.0. W 2009 roku W3C postanowiło, że
+                            XHTML 2.0 nie będzie już rozwijane. W3C oraz WHATWG obecnie pracują wspólnie nad
+                            rozwojem HTML5.
+
+                            HTML5 jest często porównywany do Adobe Flash, jednak te dwie technologie są bardzo
+                            różne. Obie zawierają funkcje służące do odtwarzania plików audio i wideo na stronach
+                            internetowych, oraz stosują grafikę wektorową w formacie SVG. HTML5 sam nie może być
+                            jednak używany do animacji i interaktywności – musi być uzupełniony o CSS3 oraz
+                            JavaScript.
+
+                            Mimo, że HTML5 jest dobrze znany wśród programistów od lat, stał się tematem mediów
+                            głównego nurtu od około kwietnia 2010 roku po tym, jak Steve Jobs, ówczesny CEO firmy
+                            Apple wystosował list publiczny zatytułowany „Rozważania na temat Flash’a”, w którym
+                            stwierdził, że „Flash nie jest już konieczny, aby obejrzeć film lub wyświetlać
+                            jakiekolwiek treści w internecie” oraz że „nowe, otwarte standardy stworzone w dobie
+                            urządzeń przenośnych, takich jak HTML5, wygrają”. Wywołało to debatę w kręgach
+                            związanych z rozwojem sieci web. Niektórzy sugerowali, że deweloperzy muszą brać pod
+                            uwagę zmieniającą się obsługę przeglądarek, jak również inne różnice między HTML5 i
+                            Flash. Na początku listopada 2011 roku Adobe ogłosiło, że zaprzestanie rozwoju Flasha
+                            dla urządzeń mobilnych oraz skupi swoje wysiłki w rozwijaniu narzędzi wykorzystujących
+                            HTML5.
+                        </p>
+
+                        <h2>Artykuł o CSS3</h2>
+
+                        <p class="article-text">
+                            Kaskadowe arkusze stylów (ang. Cascading Style Sheets, w skrócie CSS) to język służący
+                            do opisu formy prezentacji (wyświetlania) stron WWW. CSS został opracowany przez
+                            organizację W3C w 1996 r. jako potomek języka DSSSL przeznaczony do używania w
+                            połączeniu z SGML-em. Pierwszy szkic CSS zaproponował w 1994 r. Håkon Wium Lie.
+                            Pierwotnie HTML był językiem wyłącznie do opisu struktury dokumentu. Jednak z czasem
+                            zrodziła się potrzeba ożywienia wyglądu takich dokumentów. Powoli dodawano nowe
+                            znaczniki do HTML pozwalające kontrolować kolory, typografię, dodawać nowe media (np.
+                            obrazki). Te niestandardowe rozszerzenia realizowane były przez najpopularniejszych
+                            producentów przeglądarek bez porozumienia z drugim. Doprowadziło to do
+                            zaimplementowania nowych znaczników działających w konkretnej grupie przeglądarek i nie
+                            działających w innych przeglądarkach. Projektanci zostali zmuszeni do wysyłania do
+                            klienta różnych wersji tej samej witryny w zależności od użytej przeglądarki, uzyskanie
+                            identycznego wyglądu w różnych przeglądarkach było praktycznie niemożliwe. Håkon Wium
+                            Lie jako pierwszy zaproponował CHSS (Cascading HTML Style Sheets) w październiku 1994
+                            roku. Później Lie i Bert Bos pracowali wspólnie nad standardem CSS (literka H została
+                            usunięta ze względu na możliwość stosowania stylów do innych podobnych do HTML
+                            języków).
+
+                            W tym czasie została utworzona organizacja World Wide Web Consortium, która z Lie’em i
+                            Bosem na czele przejęła prace nad CSS. Pod koniec 1996 roku wydano oficjalną
+                            dokumentację CSS, Kaskadowe arkusze stylów, poziom 1.
+
+                            W3C zatwierdziło dwa oficjalne standardy CSS: CSS 1 i CSS 2, a także dnia 7 czerwca
+                            2011 roku standard CSS 2.1.
+
+                            Trwają również prace nad CSS3. Wersja ta w stosunku do poprzedników wzbogaci się o
+                            wiele selektorów oraz właściwości, nowością jest także modułowy charakter języka – nie
+                            będzie to już jednolita rekomendacja, lecz kilkadziesiąt osobnych dokumentów, co
+                            pozwoli na włączanie lub wyłączanie odpowiednich modułów w przeglądarkach w zależności
+                            od chwilowych potrzeb.
+                        </p>
+
+                        <h2>Artykuł o React</h2>
+
+                        <p class="article-text">
+                            Declarative
+                            React makes it painless to create interactive UIs. Design simple views for each state
+                            in your application, and React will efficiently update and render just the right
+                            components when your data changes.
+
+                            Declarative views make your code more predictable and easier to debug.
+
+                            Component-Based
+                            Build encapsulated components that manage their own state, then compose them to make
+                            complex UIs.
+
+                            Since component logic is written in JavaScript instead of templates, you can easily
+                            pass rich data through your app and keep state out of the DOM.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="sidebar">
+                    <div class="article">
+                        <h2>Lorem Ipsum</h2>
+                        <p class="article-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a,
+                            scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.
+                            Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis,
+                            turpis
+                            vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam
+                            congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non
+                            est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
+                            Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et
+                            mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at
+                            aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a,
+                            scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.
+                            Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis,
+                            turpis
+                            vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam
+                            congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non
+                            est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
+                            Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et
+                            mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at
+                            aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="screen game">
+                <div class="game-field">
+                    <div id="player">
+                        <span id="currentPlayer"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="screen forms">
+                <h2>Formularz</h2>
+                <form id="formularz" class="form-horizontal" action="#" method="post" autocomplete="off" onsubmit="return Send()">
+                    <div class="form-group">
+                        <label for="name">IMIĘ</label>
+                        <input id="name" type="text" placeholder="Imię">
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">NAZWISKO</label>
+                        <input id="surname" type="text" placeholder="Nazwisko">
+                    </div>
+                    <div class="form-group">
+                        <label for="town">MIASTO</label>
+                        <input id="town" type="text" placeholder="Miasto">
+                    </div>
+                    <div class="form-group">
+                        <label for="street">ULICA</label>
+                        <input id="street" type="text" placeholder="Ulica">
+                    </div>
+                    <div class="form-group">
+                        <label for="homeno">NR MIESZKANIA /DOMU</label>
+                        <input id="homeno" type="text" placeholder="Numer mieszkania/domu">
+                    </div>
+                    <div class="form-group">
+                        <label for="code">KOD POCZTOWY</label>
+                        <input id="code" type="text" placeholder="XX-XXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-MAIL</label>
+                        <input id="email" type="email" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">TELEFON</label>
+                        <input id="phone" type="tel" placeholder="XXX-XXX-XXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">DATA URODZENIA</label>
+                        <input id="date" type="text" placeholder="DD-MM-YYYY">
+                    </div>
+                    <div class="form-group">
+                        <label for="regions">WOJEWÓDZTWO</label>
+                        <select id="regions">
+                            <option>Mazowieckie</option>
+                            <option>Zachodniopomorskie</option>
+                            <option>Pomorskie</option>
+                            <option>Śląskie</option>
+                            <option>Warmińsko-Mazurskie</option>
+                            <option>Wielkopolskie</option>
+                            <option>Małopolskie</option>
+                            <option>Podkarpackie</option>
+                            <option>Lubelskie</option>
+                            <option>Świętokrzyskie</option>
+                            <option>Podlaskie</option>
+                            <option>Opolskie</option>
+                            <option>Lubuskie</option>
+                            <option>Dolnośląskie</option>
+                            <option>Kujawsko-Pomorskie</option>
+                            <option>Łódzkie</option>
+                        </select>
+                    </div>
+                    <div class="radio">
+                        <label>PŁEĆ:</label>
+                        <label class="radiolbl"><input type="radio" name="optradio" checked>MĘŻCZYZNA</label>
+                        <label class="radiolbl"><input type="radio" name="optradio">KOBIETA</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>PRAWO JAZDY:</label>
+                        <label class="lblcheckbox"><input type="checkbox"> TAK</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="about">UWAGI</label>
+                        <textarea id="about" maxlength="500" rows="3" placeholder="Tutaj możesz dodać jakieś uwagi"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-primary" onclick="CheckPatterns()">OK</button>
+                            <button type="submit" class="btn btn-primary" form="formularz" value="Submit">Prześlij</button>
+                            <button type="reset" class="btn btn-primary" form="formularz" value="Reset">Resetuj</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>&copy; Wszelkie prawa zastrzeżone.</h3>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/screen.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/cleaner.js"></script>
+    <script src="scripts/validScript.js"></script>
+
+</body>
+
+</html>
