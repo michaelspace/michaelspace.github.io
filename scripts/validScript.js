@@ -49,7 +49,7 @@ function CheckPatterns() {
 function Send() {
     var _valid = CheckPatterns();
     if (_valid) {
-        alert("Pomyślnie wypełniono formularz!\nDane zostały przesłane.", "Tytułł");
+        alert("Pomyślnie wypełniono formularz!\nDane zostały przesłane.", "Tytuł");
     }
     return _valid;
 }
