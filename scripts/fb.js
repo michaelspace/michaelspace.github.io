@@ -46,13 +46,7 @@ function testAPI() {
         document.getElementById('status').innerHTML =
             'Witaj, ' + response.name + '! Twój email: ' + response.email;
         id = response.id;
+        var srcc = "https://graph.facebook.com/"+id+"/picture?type=small";
+        document.getElementById('fbprofile').innerHTML = <img src={srcc} alt="Brak zdjęcia"/>
     });
-    FB.api(
-        '/'+id.toString()+'/picture',
-        'GET',
-        {},
-        function(response) {
-            console.log(response);
-        }
-      );
 }
