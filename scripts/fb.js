@@ -38,11 +38,21 @@ window.fbAsyncInit = function () {
 }(document, 'script', 'facebook-jssdk'));
 
 function testAPI() {
+    var id = 0;
     console.log('Fetching your information.... ');
     FB.api('/me', { locale: 'pl_PL', fields: 'name, email' }, function (response) {
         console.log('Successful login for: ' + response.name);
         console.log(response);
         document.getElementById('status').innerHTML =
             'Witaj, ' + response.name + '! Twój email: ' + response.email;
+        id = response.id;
     });
+    FB.api(
+        '/'+id.toString()+'/picture',
+        'GET',
+        {},
+        function(response) {
+            console.log(response);
+        }
+      );
 }
